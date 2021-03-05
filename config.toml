@@ -1,0 +1,43 @@
+baseURL = "https://labiej.github.io/"
+languageCode = "en-us"
+title = "Joris Labie"
+
+theme = "anatole"
+
+
+[params]
+title = "I'm Joris Labie"
+author = "Joris Labie"
+description = "Always curious"
+profilePicture = "images/profile.jpg"
+
+# Disallow switch between dark and light mode
+disableThemeSwitcher = true
+
+customCss = ["css/custom.css"]
+
+[menu]
+
+  [[menu.main]]
+  name = "Home"
+  identifier = "home"
+  weight = 100
+  url = "/"
+
+  [[menu.main]]
+  name = "Posts"
+  weight = 200
+  identifier = "posts"
+  url = "/posts/"
+
+  [[menu.main]]
+  name = "About"
+  weight = 300
+  identifier = "about"
+  url = "/about/"
+
+  [[menu.main]]
+  name = "Contact"
+  weight = 400
+  identifier = "contact"
+  url = "/contact/"
