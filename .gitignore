@@ -1,1 +1,6 @@
-**/public
+# exclude everything inside public (this is used when testing locally)
+**/public/**
+
+# Specifically include the README.md file to ensure the gh-pages repo
+# has a readme. This is just a preference
+!**/public/README.md
