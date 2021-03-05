@@ -1,0 +1,35 @@
+name: deploy to labiej.github.io
+
+on:
+  push:
+    branches:
+     - main
+
+jobs:
+  deploy:
+    runs-on: ubuntu-18.04
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          submodules: true # Fetch theme
+          fetch-depth: 0
+
+      - name: Setup Hugo # Set-up hugo for use in github actions
+        uses: peaceiris/actions-hugo@v2
+        with:
+          hugo-version: latest
+
+      - name: Build site # Run hugo and update the site
+        run: hugo --minify
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          deploy_key: ${{ secrets.ACTIONS_DEPLOY_KEY }}
+          # push into a separate repository
+          # this keeps the source and the artifacts separate
+          external_repository: labiej/labiej.github.io
+          publish_branch: master # the branch to use on the external repository
+          publish_dir: ./public # The location of the generated website
+          
+
