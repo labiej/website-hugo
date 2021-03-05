@@ -31,5 +31,11 @@ jobs:
           external_repository: labiej/labiej.github.io
           publish_branch: master # the branch to use on the external repository
           publish_dir: ./public # The location of the generated website
-          force_orphan: true
+          
+          # Should one do this? It basically deletes all history.
+          # This seems counterintuitive to source control
+          # On the other hand using github-pages with static site generators
+          # seems to be a case of abusing the system anyway
+          # Further testing is required.
+          # force_orphan: true
 
