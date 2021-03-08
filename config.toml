@@ -9,10 +9,12 @@ theme = "anatole"
 title = "I'm Joris Labie"
 author = "Joris Labie"
 description = "Always curious"
-profilePicture = "images/profile.jpg"
+profilePicture = "images/Headshot.png"
 
 # Disallow switch between dark and light mode
 disableThemeSwitcher = true
+
+doNotLoadAnimations = true
 
 customCss = ["css/custom.css"]
 
